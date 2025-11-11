@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        // GDB 调试器 (微软 C/C++ 扩展专用)
+        // 开箱即用, 但调试功能不如 LLDB 强大 (例如无法显示标准库容器中的变量的值)
+        {
+            "name": "avz attach(gdb)",
+            "type": "cppdbg",
+            "request": "attach",
+            "processId": "${command:pickProcess}",
+            "program": "${command:AsmVsZombies.getPvzExePath}",
+            "MIMode": "gdb",
+            "miDebuggerPath": "c:/Users/JZYB66/Desktop/abab/AvZ/AsmVsZombies/MinGW/bin/gdb32.exe",
+            "preLaunchTask": "avz"
+        },
+
+        // LLDB 调试器 (LLDB DAP 扩展专用)
+        // 能提供更好的调试体验, 但是需要满足几个条件才能使用
+        // 使用此调试器时必须使用 32 位 AvZ 环境包, 并且需要安装 VSCode 扩展 "LLDB DAP"
+        // 并且需要在 LLDB DAP 扩展的 "Executable-path" 设置项中填入 [AvZ 环境包的根目录]/MinGW/bin/lldb-vscode.exe
+        {
+            "name": "avz attach(lldb)",
+            "type": "lldb-dap",
+            "request": "attach",
+            "program": "${command:AsmVsZombies.getPvzExePath}",
+            "preLaunchTask": "avz"
+        }
+    ]
+}

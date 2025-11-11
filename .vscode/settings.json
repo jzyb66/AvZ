@@ -1,0 +1,23 @@
+{
+    // 隐藏内联提示
+    "editor.inlayHints.enabled": "offUnlessPressed",
+
+    // 保存文件时自动格式化代码
+    // "editor.formatOnSave": true,
+
+    // AvZ 库的代码风格 (在格式化时使用) (此项为微软 C/C++ 扩展专用)
+    // "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: WebKit, AlignTrailingComments: true, Cpp11BracedListStyle: true, BreakBeforeBraces: Attach, PackConstructorInitializers: NextLineOnly, SpaceInEmptyBlock: false }",
+
+    // 禁用微软 C/C++ 扩展的语法引擎 (使用 clangd 扩展时将此项解除注释可避免冲突)
+    // "C_Cpp.intelliSenseEngine": "disabled",
+
+    // 编译参数 (仅在 clangd 扩展分析时使用)
+    "clangd.fallbackFlags": [
+        "-Ic:/Users/JZYB66/Desktop/abab/AvZ/AsmVsZombies/inc",
+        "-m32",
+        "-std=c++1z",
+        
+    ],
+    "avzConfigure.avzDir": "c:/Users/JZYB66/Desktop/abab/AvZ/AsmVsZombies",
+
+}
